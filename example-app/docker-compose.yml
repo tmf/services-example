@@ -6,10 +6,16 @@ services:
       args:
         BUILD_ENV: development
     command: sh -c "yarn install && yarn start"
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     volumes:
       - .:/example-app/:rw
     environment:
       NODE_ENV: development
 
+  gateway:
+    build: ../gateway
+    links:
+      - example-app
+    ports:
+      - "80:80"
