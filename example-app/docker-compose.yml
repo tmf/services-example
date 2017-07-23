@@ -12,10 +12,18 @@ services:
       - .:/example-app/:rw
     environment:
       NODE_ENV: development
+    links:
+      - api
+
+  api:
+    build: ../api
+    expose:
+      - "4000"
 
   gateway:
     build: ../gateway
     links:
       - example-app
+      - api
     ports:
       - "80:80"

@@ -8,9 +8,15 @@ services:
     expose:
       - "3000"
 
+  api:
+    build: api
+    expose:
+      - "4000"
+
   gateway:
     build: gateway
     links:
       - example-app
+      - api
     ports:
       - "80:80"
