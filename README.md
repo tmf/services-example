@@ -21,3 +21,14 @@ With live-reloading ✨!
 docker-compose up
 ```
 
+# Docker image building is eating all my disk space!
+
+ - Delete all containers
+   ```sh
+docker rm $(docker ps -a -q)
+```
+ - Delete all images
+   ```sh
+docker rmi $(docker images -q)
+```
+
