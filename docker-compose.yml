@@ -1,0 +1,9 @@
+version: "3"
+services:
+  example-app:
+    build:
+      context: example-app
+      args:
+        BUILD_ENV: production
+    ports:
+     - "3000:3000"

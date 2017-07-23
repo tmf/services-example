@@ -5,10 +5,13 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "serve": "6.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "if [ \"$NODE_ENV\" = \"production\" ]; then yarn run start:prod; else yarn run start:dev; fi",
+    "start:dev": "react-scripts start",
+    "start:prod": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
