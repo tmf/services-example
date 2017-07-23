@@ -4,7 +4,7 @@ ENV NODE_ENV production
 ENV PORT 4000
 
 WORKDIR /api
-COPY . /api
+COPY ./service /api
 
 RUN yarn install
 
