@@ -5,5 +5,12 @@ services:
       context: example-app
       args:
         BUILD_ENV: production
+    expose:
+      - "3000"
+
+  gateway:
+    build: gateway
+    links:
+      - example-app
     ports:
-     - "3000:3000"
+      - "80:80"
