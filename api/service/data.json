@@ -1,6 +1,6 @@
 {
-  "items": [
-    { "id": 1, "title": "first item" },
-    { "id": 2, "title": "second item" }
+  "todos": [
+    { "id": 1, "text": "first todo", "completed": true },
+    { "id": 2, "text": "second todo", "completed": false }
   ]
 }
