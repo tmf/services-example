@@ -1,5 +1,8 @@
 {
   "name": "api-connector",
   "version": "0.1.0",
-  "main": "dist/api-connector.js"
+  "main": "dist/api-connector.js",
+  "publishConfig": {
+    "registry": "https://nexus.doodle.com/repository/npm-registry/"
+  }
 }
