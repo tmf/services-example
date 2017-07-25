@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { reducer as todos } from '../lib/api-connector';
+import { reducer as todos } from 'example-api-connector';
 import visibilityFilter from './visibility-reducer';
 
 export default combineReducers({

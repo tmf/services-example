@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../lib/api-connector'
+import { addTodo } from 'example-api-connector'
 
 let AddTodo = ({ dispatch }) => {
     let input

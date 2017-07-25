@@ -2405,6 +2405,10 @@ evp_bytestokey@^1.0.0:
   dependencies:
     create-hash "^1.1.1"
 
+example-api-connector@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/example-api-connector/-/example-api-connector-0.1.0.tgz#e9b96129a896425734125cf275c0a5fff5807c2c"
+
 exec-sh@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.0.tgz#14f75de3f20d286ef933099b2ce50a90359cef10"

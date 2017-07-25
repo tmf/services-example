@@ -13,7 +13,7 @@ services:
     environment:
       NODE_ENV: development
     links:
-      - api
+      - example-api
 
   example-api:
     build: ../example-api
@@ -24,6 +24,6 @@ services:
     build: ../gateway
     links:
       - example-app
-      - api
+      - example-api
     ports:
       - "80:80"
