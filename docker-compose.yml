@@ -17,6 +17,6 @@ services:
     build: gateway
     links:
       - example-app
-      - api
+      - example-api
     ports:
       - "80:80"
