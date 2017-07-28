@@ -1,6 +1,6 @@
 {
   "name": "example-api-connector",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "main": "dist/example-api-connector.js",
   "scripts": {
     "prepublishOnly": "NODE_ENV=production rollup -c",
@@ -20,5 +20,8 @@
   "dependencies": {
     "redux-saga": "^0.15.6",
     "unfetch": "^3.0.0"
-  }
+  },
+  "files": [
+    "dist/example-api-connector.js"
+  ]
 }
