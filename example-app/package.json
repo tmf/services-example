@@ -9,7 +9,7 @@
     "react-redux": "^5.0.5",
     "react-scripts": "1.0.10",
     "redux": "^3.7.2",
-    "redux-saga": "^0.15.5",
+    "redux-saga": "^0.15.6",
     "serve": "6.0.2"
   },
   "scripts": {
