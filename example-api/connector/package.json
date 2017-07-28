@@ -17,6 +17,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
+    "redux-saga": "^0.15.6",
     "unfetch": "^3.0.0"
   }
 }
