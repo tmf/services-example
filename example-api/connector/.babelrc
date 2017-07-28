@@ -1,14 +1,9 @@
 {
   "presets": [
-    [
-      "es2015",
-      {
-        "modules": false
-      }
-    ],
+    "es2015-rollup",
     "stage-2"
   ],
   "plugins": [
-    "external-helpers"
+    "transform-runtime"
   ]
 }
