@@ -1,6 +1,6 @@
 {
   "name": "example-api-connector",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/example-api-connector.js",
   "scripts": {
     "prepublishOnly": "NODE_ENV=production rollup -c",
