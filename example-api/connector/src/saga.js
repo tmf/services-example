@@ -60,7 +60,7 @@ function* storeAllTodos() {
     try {
         const todos = yield select((state) => state.todos);
 
-        yield call(storage.storeTodos(todos));
+        yield call(storage.storeTodos, todos);
     } catch (e) {
         // fail silently for storage
     }
