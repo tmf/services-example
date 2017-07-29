@@ -7,6 +7,7 @@ const Link = ({ active, children, onClick }) => {
     }
 
     return (
+        // eslint-disable-next-line jsx-a11y/href-no-hash
         <a
             href="#"
             onClick={e => {
