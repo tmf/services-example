@@ -1,22 +1,46 @@
 version: "3"
 services:
   example-app:
+    image: tforrer/example-app:0.2.0
     build:
       context: example-app
       args:
         BUILD_ENV: production
     expose:
       - "3000"
+    networks:
+      - services-example
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
 
   example-api:
+    image: tforrer/example-api:0.1.0
     build: example-api
     expose:
       - "4000"
+    networks:
+      - services-example
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
 
   gateway:
+    image: tforrer/services-example-gateway:0.1.0
     build: gateway
     links:
       - example-app
       - example-api
     ports:
       - "80:80"
+    networks:
+      - services-example
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+
+networks:
+    services-example:

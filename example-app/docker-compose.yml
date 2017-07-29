@@ -1,10 +1,8 @@
 version: "3"
 services:
   example-app:
-    build:
-      context: "."
-      args:
-        BUILD_ENV: development
+    image: tforrer/example-app:0.2.0-dev
+    build: .
     command: sh -c "yarn install && yarn start"
     expose:
       - "3000"
@@ -14,16 +12,27 @@ services:
       NODE_ENV: development
     links:
       - example-api
+    networks:
+      - services-example
 
   example-api:
+    image: tforrer/example-api:0.1.0
     build: ../example-api
     expose:
       - "4000"
+    networks:
+      - services-example
 
   gateway:
+    image: tforrer/services-example-gateway:0.1.0
     build: ../gateway
     links:
       - example-app
       - example-api
     ports:
       - "80:80"
+    networks:
+      - services-example
+
+networks:
+  services-example:
