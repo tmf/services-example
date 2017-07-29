@@ -47,11 +47,5 @@ open http://localhost
 
 ```sh
 cd example-app
-docker build -t tforrer/example-app:n.n.n --build-arg BUILD_ENV=production --no-cache .
-docker push tforrer/example-app:n.n.n
-
-docker build -t tforrer/example-app:n.n.n-dev --no-cache .
-docker push tforrer/example-app:n.n.n-dev
-
-open http://localhost
+make release VERSION=0.3.2 BUILD_ENV=production
 ```
