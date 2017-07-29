@@ -8,10 +8,7 @@ import App from './containers/App';
 
 import './index.css';
 
-const store = createStore({
-    todos: [],
-    visibilityFilter: 'SHOW_ALL'
-});
+const store = createStore();
 
 ReactDOM.render(
     <Provider store={store}>
