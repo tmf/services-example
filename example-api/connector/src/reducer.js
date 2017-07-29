@@ -30,6 +30,7 @@ export default (state = [], action) => {
             );
 
         case ActionTypes.FETCH_TODOS_SUCCEEDED:
+        case ActionTypes.LOAD_TODOS_SUCCEEDED:
             return [
                 ...action.todos,
             ];

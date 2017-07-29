@@ -7,6 +7,7 @@ export const ActionTypes = {
     TOGGLE_TODO_FAILED: 'TOGGLE_TODO_FAILED',
     FETCH_TODOS: 'FETCH_TODOS',
     FETCH_TODOS_SUCCEEDED: 'FETCH_TODOS_SUCCEEDED',
+    LOAD_TODOS_SUCCEEDED: 'LOAD_TODOS_SUCCEEDED',
     FETCH_TODOS_FAILED: 'FETCH_TODOS_FAILED',
 };
 
@@ -65,6 +66,13 @@ export const fetchTodos = () => {
 export const fetchTodosSucceeded = (todos) => {
     return {
         type: ActionTypes.FETCH_TODOS_SUCCEEDED,
+        todos,
+    };
+};
+
+export const loadTodosSucceeded = (todos) => {
+    return {
+        type: ActionTypes.LOAD_TODOS_SUCCEEDED,
         todos,
     };
 };
