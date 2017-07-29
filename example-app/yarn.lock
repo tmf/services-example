@@ -2409,9 +2409,9 @@ evp_bytestokey@^1.0.0:
   dependencies:
     create-hash "^1.1.1"
 
-example-api-connector@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/example-api-connector/-/example-api-connector-0.3.0.tgz#1db57902a1b9ee937f18d818abe3178aa5893eb7"
+example-api-connector@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/example-api-connector/-/example-api-connector-0.3.2.tgz#579cc4ae1de8d1389d683dbcd4ac201cb3cabb8e"
   dependencies:
     redux-saga "^0.15.6"
     unfetch "^3.0.0"
