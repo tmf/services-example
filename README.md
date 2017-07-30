@@ -1,4 +1,5 @@
 # services example
+> dockerized API, gateway and React with redux architecture with hot reloading and including external state management for microservice data through packaged reducers, sagas, containers and components
 
 [Demo](http://services-external-1mlixwq6c5yo4-196035142.eu-central-1.elb.amazonaws.com/)
 
