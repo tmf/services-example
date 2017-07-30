@@ -9,8 +9,8 @@ Demonstrate how microservices combined with their frontend services (reducers, s
 
 On a higher level, it proposes to introduce boundaries in the redux state: not everything is necessarily UI state. Let API-data related reducers manage their own state!
 
-The idea is that you just need to connect the microservice's iniital state, reducer and saga to the redux state and then be able to use containers provided by the "connector".
-This is possible in this example, however [example-app/src/components/TodoList](https://github.com/tmf/services-example/blob/master/example-app/src/components/TodoList) and related components could be packaged into a ready-to-use container (and components) in [example-api/connector](https://github.com/tmf/services-example/blob/master/example-api/connector). These containers would already be "connected" to the state, regarding API-related state data.
+The idea is that you just need to connect the microservice's inital state, reducer and saga to the redux state and then be able to use containers provided by the "connector".
+This could be done by packaging [example-app/src/components/TodoList](https://github.com/tmf/services-example/blob/master/example-app/src/components/TodoList) and related components into a ready-to-use container (and components) in [example-api/connector](https://github.com/tmf/services-example/blob/master/example-api/connector). These containers would already be "connected" to the state, regarding API-related state data.
 
 Of course, this will only truly scale with multiple microservices and frontends.
 
