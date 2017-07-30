@@ -1,6 +1,6 @@
 {
   "name": "example-app",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
   "dependencies": {
     "example-api-connector": "0.3.2",
@@ -10,7 +10,7 @@
     "react-scripts": "1.0.10",
     "redux": "3.7.2",
     "redux-saga": "0.15.6",
-    "serve": "6.0.2"
+    "serve": "6.0.3"
   },
   "scripts": {
     "start": "if [ \"$NODE_ENV\" = \"production\" ]; then yarn run start:prod; else yarn run start:dev; fi",

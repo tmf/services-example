@@ -1,7 +1,7 @@
 version: "3"
 services:
   example-app:
-    image: tforrer/example-app:0.3.1-dev
+    image: tforrer/example-app:0.3.2-dev
     build: .
     command: sh -c "yarn install && yarn start"
     expose:
