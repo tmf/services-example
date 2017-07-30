@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Link = ({ active, children, onClick }) => {
+const Pill = ({ active, children, onClick }) => {
     if (active) {
-        return <span>{children}</span>
+        return <li><a href="#">{children}</a></li>;
     }
 
     return (
         // eslint-disable-next-line jsx-a11y/href-no-hash
-        <a
+        <li><a
             href="#"
             onClick={e => {
                 e.preventDefault()
@@ -16,14 +16,14 @@ const Link = ({ active, children, onClick }) => {
             }}
         >
             {children}
-        </a>
+        </a></li>
     )
-}
+};
 
-Link.propTypes = {
+Pill.propTypes = {
     active: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
-}
+};
 
-export default Link
+export default Pill;

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { toggleTodo } from 'example-api-connector'
-import TodoList from '../components/TodoList'
+import { toggleTodo } from 'example-api-connector';
+import TodoList from '../components/TodoList/index';
 import { fetchTodos } from "example-api-connector";
 
 const getVisibleTodos = (todos, filter) => {

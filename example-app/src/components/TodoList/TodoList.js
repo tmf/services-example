@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import Todo from './Todo'
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import Todo from '../Todo';
 
 class TodoList extends PureComponent {
     componentDidMount() {
@@ -30,4 +30,4 @@ TodoList.propTypes = {
     onMount: PropTypes.func.isRequired,
 };
 
-export default TodoList
+export default TodoList;
