@@ -1,6 +1,6 @@
 NS = tforrer
 REPO = example-app
-VERSION ?= latest
+VERSION ?= 0.3.1
 BUILD_ENV ?= production
 
 ifeq ($(BUILD_ENV), development)
