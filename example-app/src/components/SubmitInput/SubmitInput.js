@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './SubmitInput.css';
+
 let SubmitInput = ({ onSubmit, placeholder }) => {
     let input;
 
@@ -16,6 +18,7 @@ let SubmitInput = ({ onSubmit, placeholder }) => {
             }}
         >
             <input
+                className="new-todo"
                 ref={node => {
                     input = node
                 }}

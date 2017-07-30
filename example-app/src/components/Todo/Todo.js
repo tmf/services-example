@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Todo.css';
+
 const Todo = ({ onClick, completed, text }) => (
     <li
         onClick={onClick}
-        style={{ textDecoration: completed ? 'line-through' : 'none'}}
+        className={completed ? 'completed' : ''}
     >
-        <input type="checkbox" checked={completed} />
+        <input type="checkbox" className="toggle" checked={completed} />
         <label>{text}</label>
     </li>
 );

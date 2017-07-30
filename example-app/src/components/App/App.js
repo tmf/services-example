@@ -4,18 +4,20 @@ import Footer from '../Footer';
 import AddTodo from '../../containers/AddTodo';
 import VisibleTodoList from '../../containers/VisibleTodoList';
 
+import './App.css';
+
 class App extends Component {
     render() {
         return (
-            <section>
-                <header>
+            <section className="todoapp">
+                <header className="header">
                     <h1>todos</h1>
                     <AddTodo />
                 </header>
-                <section>
+                <section className="main">
                     <VisibleTodoList />
                 </section>
-                <footer>
+                <footer className="footer">
                     <Footer />
                 </footer>
             </section>

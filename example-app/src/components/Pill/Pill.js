@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Pill.css';
+
 const Pill = ({ active, children, onClick }) => {
     if (active) {
-        return <li><a href="#">{children}</a></li>;
+        return <li className="pill"><a href="#" className="selected">{children}</a></li>;
     }
 
     return (
         // eslint-disable-next-line jsx-a11y/href-no-hash
-        <li><a
+        <li className="pill"><a
             href="#"
             onClick={e => {
                 e.preventDefault()

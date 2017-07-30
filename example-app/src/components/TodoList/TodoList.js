@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Todo from '../Todo';
 
+import './TodoList.css';
+
 class TodoList extends PureComponent {
     componentDidMount() {
         const { onMount } = this.props;
@@ -10,7 +12,7 @@ class TodoList extends PureComponent {
 
     render() {
         const { todos, onTodoClick } = this.props;
-        return <ul>
+        return <ul className="todo-list">
             {todos.map(todo => (
                 <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)}/>
             ))}
