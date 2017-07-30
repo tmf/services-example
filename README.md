@@ -5,7 +5,9 @@
 ![architecture](https://docs.google.com/drawings/d/1_FSdF3uUWhf-c5ww5YlPhq6uFXQjPu2JZ4491tKqq00/pub?w=1671&h=835)
 
 Demonstrate how microservices combined with their frontend services (reducers, sagas, actions, initial state) can help create highly reusable modules.
+
 On a higher level, it proposes to introduce boundaries in the redux state: not everything is necessarily UI state. Let API-data related reducers manage their own state!
+
 The idea is that you just need to connect the microservice's iniital state, reducer and saga to the redux state and then be able to use containers provided by the "connector".
 This is possible in this example, however [example-app/src/components/TodoList](https://github.com/tmf/services-example/blob/master/example-app/src/components/TodoList) and related components could be packaged into a ready-to-use container (and components) in [example-api/connector](https://github.com/tmf/services-example/blob/master/example-api/connector). These containers would already be "connected" to the state, regarding API-related state data.
 
