@@ -1,5 +1,7 @@
 # services example
 
+[Demo](http://services-external-1mlixwq6c5yo4-196035142.eu-central-1.elb.amazonaws.com/)
+
 Demonstrate how microservices combined with their frontend services (reducers, sagas, actions, selectors) can help create highly reusable modules.
 
 ## Requirements
@@ -49,3 +51,37 @@ open http://localhost
 cd example-app
 make release VERSION=0.3.2 BUILD_ENV=production
 ```
+
+### Deploying stack
+
+I didn't figure out how to scale example-api: each instance has it's own data.json.
+Sharing (with volumes?) didn't work yet (I am doing something wrong).
+This is why, right now, example-api has only one instance (replica)... And is therefore a single point of failure. But I suppose a real API service would manage to share some kind of distributed database.
+
+1. Connect to your docker swarm
+   ```sh
+   docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock -e DOCKER_HOST dockercloud/client username/swarm
+   # ...
+   # Use your Docker ID credentials to authenticate:
+   # Username: username
+   # Password:
+   ```
+2. Define docker host
+   ```sh
+   export DOCKER_HOST=tcp://127.0.0.1:32768
+   ```
+3. deploy
+   ```sh
+   # in services-example
+   docker stack deploy -c docker-compose.yml services-example
+   ```
+3. inspect
+   ```sh
+   # in services-example
+   docker stack ps services-example
+   ```
+3. shutdown
+   ```sh
+   # in services-example
+   docker stack rm services-example
+   ```
